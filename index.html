@@ -48,7 +48,6 @@
            color: #181a1b;      /* Stronger, darker text */
 
   }
-
     form {
       display: flex;
       flex-direction: column;
@@ -153,6 +152,7 @@
   <script>
     function submitted() {
       alert("Thank you for submitting your information!");
+      document.getElementById("userForm").reset(); // Clear the form fields
       return true; // Allow the form to be submitted
     }
   </script>
