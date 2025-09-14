@@ -43,6 +43,7 @@
            color: #181a1b;      /* Stronger, darker text */
 
   }
+
     form {
       display: flex;
       flex-direction: column;
@@ -55,12 +56,17 @@
       border-radius: 12px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.18); /* subtle shadow for depth */
     }
+    .form-group {
+  width: 100%;
+  margin-bottom: 1.1rem; /* space between fields */
+}
     label {
       font-size: 1.1rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.6rem;
       font-weight: 500;
       /* color: #444851; */
-           color: #181a1b;      /* Stronger, darker text */
+     color: #181a1b;      /* Stronger, darker text */
+        display: block; /* Ensures margin applies correctly */
     }
     input[type="text"],
     input[type="email"] {
@@ -70,7 +76,7 @@
       /* border: 1px solid #ccc; */
       border: 1px solid #d1d5db;
       border-radius: 4px;
-      margin-bottom: 1.2rem;
+      /* margin-bottom: 0.6rem; */
       font-family: 'Inter', sans-serif;
       background: #fff;
       color: #23272f;
@@ -107,15 +113,21 @@
   <p> Please provide your contact information so we can share preview details with you.</p>
   <p>Thank you for your interest! </p>
   <form id="userForm" action="https://docs.google.com/forms/d/e/1FAIpQLScclYbvhLLfdQYWN07lv1XS2NMGg3hFXAIvLLRWUjzhWLGNbw/formResponse" method="POST" target="hidden_iframe" onsubmit="return submitted()">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="entry.101758814" required>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="entry.101758814" required>
+    </div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="entry.1290901995" required>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="entry.1290901995" required>
+    </div>
 
     <button type="submit">Submit</button>
-    
+
   </form>
+  <div style="height: 4rem;"></div> <!-- Extra space below the form -->
+
   
   <iframe name="hidden_iframe" style="display:none;"></iframe>
 
