@@ -56,6 +56,14 @@
       border-radius: 12px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.18); /* subtle shadow for depth */
     }
+    /* Make form padding and width responsive on small screens */
+@media (max-width: 500px) {
+  form {
+    padding: 1rem 0.5rem;
+    width: 95%;
+    max-width: 95vw;
+  }
+}
     .form-group {
   width: 100%;
   margin-bottom: 1.1rem; /* space between fields */
